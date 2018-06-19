@@ -1,10 +1,28 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script>
+		var buttonnro = 0;
+		
+		function toTwoDigit(n) {
+			return n > 9 ? "" + n: "0" + n;
+		}
+		function addone(id) {
+			buttonnro += 1;
+			if (buttonnro < 30) {
+				id.innerHTML = toTwoDigit(buttonnro);
+			}
+			else {
+				id.innerHTML = "Voitit pelin!"
+			}
+		}
+	</script>
 </head>
 <body>
 	<h1>NoStars Career Game</h1>
-	<button>Voitit pelin!</button>
+	<div>
+	<button onclick="addone(this)">0</button>
+	</div>
 </body>
 
 </html>
